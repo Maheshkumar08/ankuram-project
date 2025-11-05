@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- WOW.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <style>
         :root {
@@ -177,6 +179,61 @@
         color: #555;
         font-size: 0.95rem;
       }
+       .programs-section {
+    background-color: #FFF8F6;
+    font-family: 'Poppins', sans-serif;
+  }
+  .programs-title {
+    color: #6E196E;
+    font-weight: 800;
+    font-size: 2.2rem;
+  }
+  .programs-text {
+    color: #444;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  .programs-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+  .programs-list li {
+    margin-bottom: 10px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .programs-list i {
+    color: #F14079;
+    font-size: 1.1rem;
+  }
+  .programs-img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(110, 25, 110, 0.15);
+    transition: all 0.4s ease;
+  }
+  .programs-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 35px rgba(110, 25, 110, 0.25);
+  }
+  .btn-learn {
+    background-color: #F14079;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+  }
+  .btn-learn:hover {
+    background-color: #6E196E;
+    transform: scale(1.05);
+  }
 
       /* 🌿 Inclusive Section */
       .inclusive {
@@ -363,7 +420,10 @@
       color:#222222;
       
     }
-
+ .programs-title { text-align: center; font-size: 2rem; }
+    .programs-text, .programs-list { text-align: center; }
+    .programs-list li { justify-content: center; }
+    .btn-learn { display: block; margin: 0 auto; }
 }
     
 @media (max-width: 768px) {
@@ -494,7 +554,7 @@
           </a>
           <ul class="dropdown-menu" aria-labelledby="journalDropdown">
             <li><a class="dropdown-item" href="Event.html">Event</a></li>
-            <li><a class="dropdown-item" href="#">Success Story</a></li>
+            <li><a class="dropdown-item" href="sucess-story.html">Success Story</a></li>
           </ul>
         </li>
 
@@ -578,6 +638,104 @@
         </div>
       </div>
     </section>
+    <!-- 🌈 1️⃣ Core Services & Therapies -->
+<section class="programs-section py-5">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6 text-center">
+        <img src="/image/services-img/therapy.jpg" alt="Core Therapies" class="programs-img animate__animated animate__fadeInLeft">
+      </div>
+      <div class="col-md-6 animate__animated animate__fadeInRight">
+        <h2 class="programs-title mb-3">Core Services & Therapies</h2>
+        <p class="programs-text">
+          <strong>Ankurm Foundation</strong> offers a wide range of therapies designed to enhance children’s overall development. 
+          Our experts provide <strong>speech therapy, occupational therapy, sensory integration</strong>, and <strong>behavioral therapy</strong> 
+          to improve communication, focus, and motor coordination.
+        </p>
+        <ul class="programs-list">
+          <li><i class="fa-solid fa-brain"></i> Personalized therapy sessions for each child.</li>
+          <li><i class="fa-solid fa-child-reaching"></i> Focus on motor, speech & social development.</li>
+          <li><i class="fa-solid fa-user-md"></i> Experienced therapists guiding every step.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 🌸 2️⃣ Inclusive Education Center -->
+<section class="programs-section py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center flex-md-row-reverse g-5">
+      <div class="col-md-6 text-center">
+        <img src="/image/services-img/inclusive-education.jpg" alt="Inclusive Education" class="programs-img animate__animated animate__fadeInRight">
+      </div>
+      <div class="col-md-6 animate__animated animate__fadeInLeft">
+        <h2 class="programs-title mb-3">Inclusive Education Center</h2>
+        <p class="programs-text">
+          We believe that <strong>learning together builds empathy and equality</strong>. 
+          At our inclusive center, children with special needs study alongside their peers — 
+          engaging in <strong>arts, yoga, computer learning, and creative activities</strong> that promote confidence and teamwork.
+        </p>
+        <ul class="programs-list">
+          <li><i class="fa-solid fa-school"></i> Shared classrooms for all children.</li>
+          <li><i class="fa-solid fa-handshake-angle"></i> Builds social understanding & respect.</li>
+          <li><i class="fa-solid fa-laptop"></i> Modern resources for blended learning.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 💖 3️⃣ Life Skills & Family Support -->
+<section class="programs-section py-5">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6 text-center">
+        <img src="" alt="Life Skills Training" class="programs-img animate__animated animate__fadeInLeft">
+      </div>
+      <div class="col-md-6 animate__animated animate__fadeInRight">
+        <h2 class="programs-title mb-3">Life Skills & Family Support</h2>
+        <p class="programs-text">
+          We empower children to handle daily activities independently — from dressing and eating 
+          to learning digital and social skills. Parents receive <strong>guidance and counseling</strong> 
+          to ensure they can support their child’s progress confidently at home.
+        </p>
+        <ul class="programs-list">
+          <li><i class="fa-solid fa-utensils"></i> Practical skill training for independence.</li>
+          <li><i class="fa-solid fa-people-arrows"></i> Parent workshops & family support.</li>
+          <li><i class="fa-solid fa-hand-holding-heart"></i> Emotional and behavioral guidance.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 💫 4️⃣ Flexible & Personalized Programs -->
+<section class="programs-section py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center flex-md-row-reverse g-5">
+      <div class="col-md-6 text-center">
+        <img src="/image/services-img/flexible-programs.jpg" alt="Flexible Services" class="programs-img animate__animated animate__fadeInRight">
+      </div>
+      <div class="col-md-6 animate__animated animate__fadeInLeft">
+        <h2 class="programs-title mb-3">Flexible & Personalized Programs</h2>
+        <p class="programs-text">
+          Every child is unique — that’s why we offer <strong>customized schedules and therapy plans</strong>. 
+          Whether your child needs full-time, part-time, or specific sessions, 
+          we tailor our approach to ensure the best developmental outcomes.
+        </p>
+        <ul class="programs-list">
+          <li><i class="fa-solid fa-clock"></i> Flexible session timings.</li>
+          <li><i class="fa-solid fa-chart-line"></i> Progress tracking & feedback reports.</li>
+          <li><i class="fa-solid fa-user-check"></i> One-on-one attention for every child.</li>
+        </ul>
+        <a href="contact.html" class="btn-learn">Join Our Programs</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
     <!-- 🌿 INCLUSIVE SECTION -->
     <section class="inclusive wow animate__animated animate__fadeIn">
