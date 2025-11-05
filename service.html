@@ -30,71 +30,79 @@
     padding: 0;
     box-sizing: border-box;
 }
-.navbar {
-  /* background-color: #222 !important; */
-  /* padding: 0px 6%; */
+
+      .navbar {
+  background-color: #6E196E;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 8px 5%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  background-color: #6E196E;
-  
+  justify-content: space-between;
 }
-#navbar img{
-    width: 150px;
-    height: 50%;
-    cursor: pointer;
-     object-fit: contain;
+
+/* Logo */
+.navbar-brand img {
+  height: 60px;
   transition: transform 0.3s ease;
 }
-#navbar img:hover {
+.navbar-brand img:hover {
   transform: scale(1.05);
 }
 
-/* 🔹 Logo Styling */
-
-
-
-
-/* 🔹 Navbar Links Center Alignment */
-.navbar-collapse {
-  flex-grow: 1;
-  display: flex;
-  flex-flow: row;
-  align-items: center;
-  justify-content: space-evenly;
-  margin-left: 39%;
-  
+/* Links */
+.nav-link {
+  color: var(--info-color) !important;
+  font-weight: 500;
+  padding: 10px 18px;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
-.navbar-nav .nav-link {
-  color: #fff !important;
-  font-weight: 600;
-  font-size: 17px;
-  transition: color 0.3s ease;
-}
-#navbar{
-    width: 100%;
-    background-color: #6E196E;
-    
-}
-ul{
-    
-    list-style: none;
-    gap: 20px;
-    text-align: center;
-    font-size: 25px;
-    font-weight: 900;
-    color: #fff;
-
+.nav-link:hover {
+  color: yellow !important;
+  transform: translateY(-2px);
 }
 
-.navbar .nav-link:hover {
-  color: #f5b301 !important; /* Yellow hover color */
+/* 🔹 Dropdown (Show on Hover) */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  animation: fadeIn 0.3s ease;
 }
-      body {
-        font-family: 'Poppins', sans-serif;
-        background-color: #FFF8F6;
-        overflow-x: hidden;
-      }
+
+.dropdown-menu {
+  background-color: #FEECEE;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.dropdown-item {
+  color: #333333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #F25435;
+  color: #fff;
+}
+
+/* 🔹 Support Button */
+.btn-danger {
+  background-color:#F14079;
+  border: none;
+  /* transition: all 0.3s ease; */
+}
+
+.btn-danger:hover {
+  background-color: #DB2038;
+  transform: scale(1.05);
+}
+
+/* 🔹 Fade Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
       /* 🌈 Hero Section */
       .hero {
@@ -322,41 +330,98 @@ ul{
 
 /* Tablets (max width 992px) */
 @media (max-width: 992px) {
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+
+/* Dropdown menu */
+.dropdown-menu {
+  background-color: #FEECEE;
+  border-radius: 10px;
+  border: none;
+}
+.dropdown-item:hover {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+/* Support button */
+.btn-danger {
+  background-color:transparent;
+  border: none;
+  padding: 8px 22px;
+  border-radius: 25px;
+  font-weight: 600;
+  /* transition: all 0.3s ease; */
+}
+.btn-danger:hover {
+  background-color: #DB2038;
+  transform: scale(1.05);
+}
+    .navbar-nav{
+      color:#222222;
+      
+    }
+
+}
+    
+@media (max-width: 768px) {
+ .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-brand {
+    flex: 1;
+  }
+
+  .navbar-toggler {
+    border: none;
+    color: #fff;
+    font-size: 28px;
+  }
+
   .navbar-collapse {
-    justify-content: center !important;
+    width: 100%;
+    background-color: #6E196E;
+    border-radius: 0 0 15px 15px;
+    margin-top: 10px;
   }
 
   .navbar-nav {
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    background-color: #6E196E;
-    border-radius: 10px;
     padding: 20px 0;
   }
 
   .navbar-nav .nav-link {
-    color: #fff !important;
-    font-size: 1rem;
+    color: white !important;
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+
+  /* Support button center */
+  .navbar-support {
+    display: none !important;
+  }
+
+  .navbar-collapse.show .btn-danger {
+    display: block;
+    margin: 15px auto;
+    padding: 10px 80px;
+    text-align: center;
+    font-size: 1.05rem;
     font-weight: 600;
-    transition: color 0.3s ease;
+    width: auto;
+    white-space: nowrap;
+    border-radius: 25px;
+    line-height: 1.4;
   }
-
-  .navbar-nav .nav-link:hover {
-    color: #f5b301 !important;
+  .navbar-nav{
+    background-color:transparent;
+    margin-right: 50%;
+    /* flex-flow: column; */
   }
-
-  .navbar-toggler {
-    color: #fff;
-    border: none;
-  }
-  .navbar-nav .nav-link:hover {
-    color: #f5b301 !important;
-  }
-}
-    
-@media (max-width: 768px) {
-  
 }
 @media (max-width: 576px) {
   .navbar-nav{
@@ -377,7 +442,7 @@ ul{
 
 /* Mobile portrait (max width 480px) */
 @media (max-width: 480px) {
-  .navbar-nav{
+   .navbar-nav{
     background-color:transparent;
     margin-right: 50%;
     /* flex-flow: column; */
@@ -387,50 +452,64 @@ ul{
     flex-flow: column wrap;
     transition: all 0.4s;
   }
+.navbar-collapse.show .btn-danger {
+    /* padding: 10px 80px; */
+    font-size: 17px;
+    margin-left: -0%;
+    margin-top: -5%;
+    /* margin: 10px; */
+    
+  }
+  
 }
     </style>
   </head>
   <body>
-        <!-- <navbar> -->
-            <nav class="navbar navbar-expand-lg">
-  <div class="container-fluid" id="navbar">
+            
+<!-- 🔹 Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid align-items-center">
+    
     <!-- 🔹 Logo -->
     <a class="navbar-brand" href="index.html">
       <img src="/image/logo-removebg-preview.png" alt="ANKURM FOUNDATION">
     </a>
 
-    <!-- 🔹 Toggle Button -->
-    <button
-      class="navbar-toggler text-white border-0"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#collapsibleNavbar"
-      aria-controls="collapsibleNavbar"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+    <!-- 🔹 Toggle -->
+    <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
       <i class="fa fa-bars fs-2"></i>
     </button>
 
-    <!-- 🔹 Collapsible Menu -->
-    <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
-      <ul class="navbar-nav text-center">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
+    <!-- 🔹 Navbar Links -->
+    <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+      <ul class="navbar-nav text-center mx-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="About-page.html">Who You Are</a></li>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="journalDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Journal
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="journalDropdown">
+            <li><a class="dropdown-item" href="Event.html">Event</a></li>
+            <li><a class="dropdown-item" href="#">Success Story</a></li>
+          </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="About-page.html">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="service.html">Services</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="Event.html">Event</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact-us.html">Contact us</a>
+
+        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+
+        <!-- Support Button for mobile -->
+        <li class="nav-item d-lg-none mt-3">
+          <button class="btn btn-danger w-50">Support</button>
         </li>
       </ul>
+    </div>
+
+    <!-- 🔹 Support Button (Desktop only) -->
+    <div class="navbar-support d-none d-lg-block">
+      <button class="btn btn-danger"><h6 id="span">Support</h6></button>
     </div>
   </div>
 </nav>
