@@ -109,7 +109,7 @@
       /* 🌈 Hero Section */
       .hero {
         background-color: #6E196E;
-        color: white;
+        color:#F14079;
         text-align: center;
         padding: 100px 20px 80px;
       }
@@ -141,10 +141,11 @@
       /* 💫 Services Section */
       .services-section {
         padding: 80px 0;
+        
       }
 
       .service-card {
-        background: #fff;
+        background:#F14079;
         border-radius: 15px;
         padding: 30px;
         text-align: center;
@@ -159,14 +160,16 @@
 
       .service-img {
         width: 100%;
-        height: 130px;
-        object-fit: contain;
+        height: 230px;
+        border-radius: 15px;
         margin-bottom: 15px;
         transition: transform 0.3s ease;
+        box-shadow: 18px 5px 18px #362929;
       }
 
       .service-card:hover .service-img {
         transform: scale(1.1);
+        box-shadow: 8px 0px 18px #ccc;
       }
 
       .service-card h4 {
@@ -214,7 +217,7 @@
     width: 100%;
     max-width: 480px;
     border-radius: 20px;
-    box-shadow: 0 8px 25px rgba(110, 25, 110, 0.15);
+    box-shadow: 10px 18px 25px rgba(110, 25, 110, 0.15);
     transition: all 0.4s ease;
   }
   .programs-img:hover {
@@ -312,21 +315,21 @@
 .footer {
   background: #333;
   color: #fff;
-  padding: 60px 8% 20px;
+  padding: 60px 4% 20px;
   font-family: 'Poppins', sans-serif;
 }
 
 /* Grid layout */
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 40px;
-  margin-bottom: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
 /* Logo */
 .footer-logo {
-  width: 160px;
+  width: 280px;
   height: auto;
 }
 .footer-desc {
@@ -623,11 +626,11 @@
     <section class="hero wow animate__animated animate__fadeInDown">
       <h1>Our Services</h1>
       <p>Empowering children with special needs through education, therapy, and holistic support.</p>
-      <img 
+      <!-- <img 
   src="/image/service-img/Our_Service-main.png" 
   alt="Children Illustration" 
   class="wow animate__animated animate__zoomIn hero-img"
-  data-wow-delay="0.3s">
+  data-wow-delay="0.3s"> -->
 
     </section>
 
@@ -815,9 +818,7 @@
     <!-- 🔹 Column 1: Logo -->
     <div class="footer-column text-center text-md-start">
       <img src="/image/logo-removebg-preview - Copy.png" alt="Ankurm Foundation Logo" class="footer-logo">
-      <p class="footer-desc mt-3">
-        Empowering every child through education, therapy & inclusion.
-      </p>
+     
     </div>
 
     <!-- 🔹 Column 2: Join Us -->
@@ -846,7 +847,7 @@
       <p>
         Ankurm Foundation<br>
         1st Floor, Barahi Tower, Near KVM School,<br>
-        Heera Nagar, Mukhani, Haldwani, Uttarakhand<br><br>
+        Heera Nagar, Mukhani, Haldwani, Uttarakhand<br>
         <i class="fa-solid fa-phone"></i> +91 8445799969<br>
         <i class="fa-solid fa-envelope"></i> ankurmfoundation@gmail.com
       </p>
@@ -863,7 +864,6 @@
     <p>© 2025 Ankurm Foundation. All Rights Reserved.</p>
   </div>
 </footer>
-    <script>
       new WOW().init();
     </script>
 

@@ -233,6 +233,100 @@
       scroll-margin-top: 100px;
       transition: all 0.3s ease;
     }
+    .footer {
+  background: #333;
+  color: #fff;
+  padding: 60px 4% 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Grid layout */
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* Logo */
+.footer-logo {
+  width: 280px;
+  height: auto;
+}
+.footer-desc {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Headings */
+.footer-column h3 {
+  color: #F14079;
+  margin-bottom: 18px;
+  font-size: 1.3rem;
+  position: relative;
+}
+.footer-column h3::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 3px;
+  background: #72BE48;
+  left: 0;
+  bottom: -8px;
+  border-radius: 5px;
+}
+
+/* Links */
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+.footer-column ul li a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-column ul li a:hover {
+  color: #F14079;
+}
+
+/* Contact text */
+.footer-column p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Social icons */
+.footer-social {
+  margin-top: 10px;
+}
+.footer-social a {
+  color: #fff;
+  font-size: 1.3rem;
+  margin-right: 15px;
+  transition: color 0.3s, transform 0.3s;
+}
+.footer-social a:hover {
+  color: #F14079;
+  transform: scale(1.2);
+}
+
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+.footer-bottom p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
     /* 📱 Responsive */
     @media (max-width: 992px) {
         .nav-item.dropdown:hover .dropdown-menu {
@@ -345,6 +439,13 @@
     margin-right: 50%;
     /* flex-flow: column; */
   }
+  .footer {
+    text-align: center;
+  }
+  .footer-column h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 @media (max-width: 576px) {
   .navbar-nav{
@@ -374,6 +475,10 @@
   }
   .navbar-collapse.show .btn-danger #span{
     margin-left: -80px;
+  }
+   .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 }
   </style>
@@ -545,7 +650,59 @@
     </div>
     </div>
   </section>    
+<!-- 🌟 4-Part Professional Footer -->
+<footer class="footer">
+  <div class="footer-container">
 
+    <!-- 🔹 Column 1: Logo -->
+    <div class="footer-column text-center text-md-start">
+      <img src="/image/logo-removebg-preview - Copy.png" alt="Ankurm Foundation Logo" class="footer-logo">
+     
+    </div>
+
+    <!-- 🔹 Column 2: Join Us -->
+    <div class="footer-column">
+      <h3>Join Us</h3>
+      <ul>
+        <li><a href="#">Speech Therapy</a></li>
+        <li><a href="#">Occupational Therapy</a></li>
+        <li><a href="#">Behavioral Therapy</a></li>
+      </ul>
+    </div>
+
+    <!-- 🔹 Column 3: Our Resources -->
+    <div class="footer-column">
+      <h3>Our Resources</h3>
+      <ul>
+        <li><a href="About-page.html">About Us</a></li>
+        <li><a href="sucess-story.html">Success Story</a></li>
+        <li><a href="support.html">Donation</a></li>
+      </ul>
+    </div>
+
+    <!-- 🔹 Column 4: Contact Info -->
+    <div class="footer-column">
+      <h3>Contact Info</h3>
+      <p>
+        Ankurm Foundation<br>
+        1st Floor, Barahi Tower, Near KVM School,<br>
+        Heera Nagar, Mukhani, Haldwani, Uttarakhand<br>
+        <i class="fa-solid fa-phone"></i> +91 8445799969<br>
+        <i class="fa-solid fa-envelope"></i> ankurmfoundation@gmail.com
+      </p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/p/Ankurm-Foundation-61571694448389/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/ankurmfoundation/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- 🔸 Bottom Line -->
+  <div class="footer-bottom">
+    <p>© 2025 Ankurm Foundation. All Rights Reserved.</p>
+  </div>
+</footer>
   <!-- ✅ Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 

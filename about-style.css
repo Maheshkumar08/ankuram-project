@@ -309,88 +309,97 @@
 }
 /* 🌙 Footer */
 .footer {
-  background: var(--danger-color);
-  color: var(--primary-color);
-  padding: 60px 10% 20px;
+  background: #333;
+  color: #fff;
+  padding: 60px 4% 20px;
   font-family: 'Poppins', sans-serif;
 }
 
+/* Grid layout */
 .footer-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin-bottom: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 10px;
 }
 
+/* Logo */
+.footer-logo {
+  width: 280px;
+  height: auto;
+}
+.footer-desc {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Headings */
 .footer-column h3 {
-  color: var(--info-color);
-  margin-bottom: 20px;
-  font-size: 1.4rem;
+  color: #F14079;
+  margin-bottom: 18px;
+  font-size: 1.3rem;
   position: relative;
 }
-
 .footer-column h3::after {
   content: "";
   position: absolute;
   width: 60px;
   height: 3px;
-  background: var(--dark-color);
+  background: #72BE48;
   left: 0;
   bottom: -8px;
   border-radius: 5px;
 }
 
+/* Links */
 .footer-column ul {
   list-style: none;
   padding: 0;
 }
-
 .footer-column ul li {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
-
 .footer-column ul li a {
-  color: var(--text-color);
+  color: #ddd;
   text-decoration: none;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
-
 .footer-column ul li a:hover {
-  color: var(--dark-color);
-  text-decoration: underline;
+  color: #F14079;
 }
 
+/* Contact text */
 .footer-column p {
-  color: var(--text-color);
+  color: #ccc;
   font-size: 0.95rem;
   line-height: 1.6;
 }
 
+/* Social icons */
 .footer-social {
-  margin-top: 15px;
+  margin-top: 10px;
 }
-
 .footer-social a {
-  color: var(--primary-color);
-  margin-right: 15px;
+  color: #fff;
   font-size: 1.3rem;
+  margin-right: 15px;
   transition: color 0.3s, transform 0.3s;
 }
-
 .footer-social a:hover {
-  color: var(--dark-color);
+  color: #F14079;
   transform: scale(1.2);
 }
 
+/* Bottom */
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
-
 .footer-bottom p {
   font-size: 0.9rem;
-  color: var(--text-color);
+  color: #ccc;
 }
 
 /* CONTACT-CSS */
@@ -618,6 +627,14 @@
   #contact-info-animation, #contact-animation {
     height: 300px !important;
   }
+  .footer {
+    text-align: center;
+  }
+  .footer-column h3::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
 }
 
 @media (max-width: 576px) {
