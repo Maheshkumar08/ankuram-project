@@ -28,7 +28,7 @@
 
     /* 🔹 Navbar */
     .navbar {
-      background: var(--primary);
+      background: #e3f4fc;
       padding: 10px 6%;
     }
     .navbar-brand img {
@@ -273,6 +273,61 @@
 
 /* 📱 Responsive */
 @media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+  }
+
+  .navbar-brand {
+    flex: 1;
+  }
+
+  .navbar-toggler {
+    border: none;
+    color: black;
+    font-size: 28px;
+  }
+
+  .navbar-collapse {
+    width: 100%;
+    background-color: #6E196E;
+    border-radius: 0 0 15px 15px;
+    margin-top: 10px;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+  }
+
+  .navbar-nav .nav-link {
+    color: white !important;
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+
+  /* Support button center */
+  .navbar-support {
+    display: none !important;
+  }
+
+  .navbar-collapse.show .btn-danger {
+    display: block;
+    margin: 15px auto;
+    padding: 10px 80px;
+    text-align: center;
+    font-size: 1.05rem;
+    font-weight: 600;
+    width: auto;
+    white-space: nowrap;
+    border-radius: 25px;
+    line-height: 1.4;
+  }
+  .navbar-nav{
+    background-color:transparent;
+    margin-right: 50%;
+    /* flex-flow: column; */
+  }
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -310,35 +365,55 @@
 </head>
 <body>
 
-  <!-- 🔹 Navbar -->
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <img src="/image/logo-removebg-preview.png" alt="ANKURM FOUNDATION">
-      </a>
-      <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
-        <i class="fa fa-bars fs-2"></i>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
-        <ul class="navbar-nav text-center mx-auto">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="About-page.html">Who You Are</a></li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Journal</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="Event.html">Event</a></li>
-              <li><a class="dropdown-item" href="sucess-story.html">Success Story</a></li>
-            </ul>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
-        </ul>
-      </div>
-      <div class="navbar-support d-none d-lg-block">
-        <button class="btn btn-danger"><a href="support.html" class="text-white text-decoration-none">Support</a></button>
-      </div>
+    <!-- 🔹 Navbar -->
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid align-items-center">
+    
+    <!-- 🔹 Logo -->
+    <a class="navbar-brand" href="index.html">
+      <img src="/image/logo-removebg-preview.png" alt="ANKURM FOUNDATION">
+    </a>
+
+    <!-- 🔹 Toggle -->
+    <button class="navbar-toggler text-black border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+      <i class="fa fa-bars fs-2"></i>
+    </button>
+
+    <!-- 🔹 Navbar Links -->
+    <div class="collapse navbar-collapse justify-content-center" id="mainNavbar">
+      <ul class="navbar-nav text-center mx-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="About-page.html">Who You Are</a></li>
+
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="journalDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Journal
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="journalDropdown">
+            <li><a class="dropdown-item" href="Event.html">Event</a></li>
+            <li><a class="dropdown-item" href="sucess-story.html">Success Story</a></li>
+          </ul>
+        </li>
+
+        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact</a></li>
+
+        <!-- Support Button for mobile -->
+        <li class="nav-item d-lg-none mt-3">
+          <button class="btn btn-outline-danger bg-transparent border-0">
+  <a href="support.html" style="text-decoration: none; color: white;">Support</a>
+</button>
+
+      </ul>
     </div>
-  </nav>
+
+    <!-- 🔹 Support Button (Desktop only) -->
+    <div class="navbar-support d-none d-lg-block">
+      <button class="btn btn-danger"><a href="support.html">Support</a></button>
+    </div>
+  </div>
+</nav>
 
   <!-- 🌟 Hero Section -->
   <section class="hero-section">

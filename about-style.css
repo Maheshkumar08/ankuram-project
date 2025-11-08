@@ -19,7 +19,7 @@
 
 /* 🌟 Navbar */
 .navbar {
-  background-color: #6E196E;
+  background-color: #e3f4fc;
   color: #F14079;
   position: sticky;
   top: 0;
@@ -548,7 +548,7 @@
 
   .navbar-toggler {
     border: none;
-    color: #fff;
+    color: black;
     font-size: 28px;
   }
 
@@ -597,6 +597,24 @@
   .about-hero p { font-size: 1rem; }
   .about-section { padding: 60px 5%; }
   .about-text p { font-size: 1rem; line-height: 1.5; }
+  .about-title {
+    text-align: center;
+    font-size: 1.7rem;
+  }
+
+  .about-text {
+    text-align: justify;       /* lines evenly spread */
+    max-width: 90%;            /* paragraph width narrow */
+    margin: 0 auto 15px;       /* center the block itself */
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #444;
+  }
+
+  .btn-custom {
+    display: block;
+    margin: 20px auto 0;       /* button center align */
+  }
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
     gap: 25px;

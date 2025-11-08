@@ -8,10 +8,33 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.0/lottie.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
 
     <link rel="stylesheet" href="about-style.css">
 
     <title>CONTACT-US</title>
+    <style>
+      .donate-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #F14079, #6E196E);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 10px rgba(241, 64, 121, 0.3);
+}
+
+.donate-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(110, 25, 110, 0.4);
+}
+
+    </style>
 </head>
 <body>
    <!-- 🔹 Navbar -->
@@ -24,7 +47,7 @@
     </a>
 
     <!-- 🔹 Toggle -->
-    <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+    <button class="navbar-toggler text-black border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
       <i class="fa fa-bars fs-2"></i>
     </button>
 
@@ -136,6 +159,19 @@
 
               <button type="submit" class="btn btn-custom w-100">Send Message</button>
             </form>
+            <div class="text-center mt-4">
+  <a href="support.html" class="donate-btn">
+    <span>Donate Now</span>
+    <lottie-player 
+      src="https://assets1.lottiefiles.com/packages/lf20_jcikwtux.json"  
+      background="transparent"  
+      speed="1"  
+      style="width: 40px; height: 40px; margin-left: 10px;"  
+      loop  
+      autoplay>
+    </lottie-player>
+  </a>
+</div>
           </div>
         </div>
       </div>

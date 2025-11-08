@@ -369,6 +369,32 @@
       .support-list li {
         justify-content: center;
       }
+       .support-list {
+    padding-left: 0;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  .support-list li {
+    justify-content: flex-start !important;
+    text-align: left;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 1rem;
+    line-height: 1.6;
+    flex-wrap: wrap;
+  }
+
+  .support-list i {
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  .support-text, .support-intro {
+    text-align: center;
+    padding: 0 10px;
+  }
       .btn-donate {
         display: block;
         margin: 20px auto;
@@ -492,7 +518,7 @@
     </a>
 
     <!-- 🔹 Toggle -->
-    <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+    <button class="navbar-toggler text-black border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
       <i class="fa fa-bars fs-2"></i>
     </button>
 
@@ -518,7 +544,7 @@
 
         <!-- Support Button for mobile -->
         <li class="nav-item d-lg-none mt-3">
-          <button class="btn btn-danger w-50">Support</button>
+          <button class="btn btn-danger w-10">Support</button>
         </li>
       </ul>
     </div>
