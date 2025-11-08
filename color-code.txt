@@ -1,0 +1,3 @@
+logo background color code   #e3f4fc
+logo mahrum colour code      #ee0a85
+logo voilet colour code	     #712a86
